@@ -1,0 +1,28 @@
+<view class="body">
+    <swiper indicator-dots="true"
+          autoplay="false" interval="2000" duration="500">
+          <block wx:for="{{banner}}" wx:key="*this">
+            <swiper-item>
+            	<image src="{{item}}" ></image>
+            </swiper-item>
+          </block>
+  	</swiper>
+
+	<view class="post">
+		<view class="post-item" wx:for="{{[1, 2, 3, 4]}}">
+			<view class="avatar">
+				<image src="../../images/avatar.png"></image>
+			</view>
+			<view class="post-content">
+				<text class="name">NJU</text>
+				<view class="date">2024-1-1</view>
+				<view class="title">微信小程序文档</view>
+				<view class="text">小程序提供了一个简单、高效的应用开发框架和丰富的组件及API，帮助开发者在微信中开发具有原生 APP 体验的服务。</view>
+				<view class="images">
+					<image src="../../images/banner1.jpg"></image>
+					<image src="../../images/banner2.jpg"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

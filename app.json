@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/square/square"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+	"navigationBarTitleText": "南大宝",
+    "navigationBarBackgroundColor": "#f4ebde"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
