@@ -1,61 +1,102 @@
 .post {
 	display: flex;
 	flex-direction: column;
+	margin-top: 20rpx;
 }
 
 .post-item {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	padding: 20rpx;
 	background-color: #fff;
 	margin-bottom: 10rpx;
 	box-sizing: border-box;
 }
 
-.avatar image {
-	width: 65rpx;
-	height: 65rpx;
-	border-radius: 32rpx;
+.post-header {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 15rpx;
 }
-
 .post-content {
 	display: flex;
 	flex-direction: column;
-	margin-left: 20rpx;
 }
-
-.post-content .name {
-	margin-top: 15rpx;
-	font-weight: bold;
-}
-.post-content .date {
-	margin-left: auto;
-	margin-top: -35rpx;
-	margin-bottom: 20rpx;
-	color: #666;
-	font-size: 26rpx;
-}
-.post-content .images {
+.post-buttom {
 	display: flex;
 	flex-direction: row;
+	margin-top: 10rpx;
 }
-.post-content .images image {
-	height: 200rpx;
-	width: 200rpx;
-	margin-right: 15rpx;
-	border-radius: 15rpx;
+
+.post-header .avatar image{
+	width: 60rpx;
+	height: 60rpx;
 }
+.post-header .name {
+	font-weight: bold;
+	margin-top: 10rpx;
+	margin-left: 30rpx;
+	font-size: 25rpx;
+}
+.post-header .date {
+	margin-left: auto;
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
+	color: #666;
+	font-size: 30rpx;
+}
+
 .post-content .title {
 	font-weight: bold;
-	margin-bottom: 10rpx;
+	font-size: 33rpx;
 }
-.post-content .text {
-	max-width: 600rpx;
-	font-size: 25rpx;
+.post-content .content {
+	max-width: 650rpx;
+	font-size: 28rpx;
 	word-break: break-all;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
+}
+.post-content .images {
+	display: flex;
+}
+.post-content .image-item {
+	width: 250rpx;
+	height: 250rpx;
+}
+.post-content .images image {
+	border-radius: 15rpx;
+	width: 100%;
+	height: 100%;
+}
+
+.post-buttom .category {
+	font-size: 25rpx;
+	margin-top: 5rpx;
+	color: #151515
+}
+.post-buttom .intereact {
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+}
+.post-buttom image {
+	width: 35rpx;
+	height: 35rpx;
+}
+.post-buttom .comment, .post-buttom .thumb {
+	display: flex;
+	flex-direction: row;
+}
+.post-buttom .comment-count, .post-buttom .thumb-count {
+	font-size: 25rpx;
+	color: #151515;
+	margin-top: 5rpx;
+}
+.post-buttom .thumb-count {
+	margin-right: 15rpx;
 }
