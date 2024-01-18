@@ -31,11 +31,11 @@
 				<view class="intereact">
 					<view class="thumb">
 						<image src="../../images/thumb.png"></image>
-						<view class="thumb-count">233</view>
+						<view class="thumb-count">114</view>
 					</view>
 					<view class="comment">
 						<image src="../../images/comment.png"></image>
-						<view class="comment-count">233</view>
+						<view class="comment-count">514</view>
 					</view>
 				</view>
 			</view>
