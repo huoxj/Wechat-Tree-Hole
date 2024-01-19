@@ -1,11 +1,39 @@
 {
   "pages": [
-    "pages/square/square"
+	"pages/square/square",
+	"pages/category/category",
+    "pages/myinfo/myinfo",
+    "pages/postpage/postpage",
+    "pages/search/search"
   ],
   "window": {
     "navigationBarTextStyle": "black",
 	"navigationBarTitleText": "南大宝",
     "navigationBarBackgroundColor": "#f4ebde"
+  },
+  "tabBar": {
+	  "list": [
+		  {
+			  "iconPath": "images/square.png",
+			  "selectedIconPath": "images/squarefill.png",
+			  "pagePath": "pages/square/square"
+		  },
+		  {
+			  "iconPath": "images/category.png",
+			  "selectedIconPath": "images/categoryfill.png",
+			  "pagePath": "pages/category/category"
+		  },
+		  {
+			  "iconPath": "images/search.png",
+			  "selectedIconPath": "images/searchfill.png",
+			  "pagePath": "pages/search/search"
+		  },
+		  {
+			  "iconPath": "images/myinfo.png",
+			  "selectedIconPath": "images/myinfofill.png",
+			  "pagePath": "pages/myinfo/myinfo"
+		  }
+	  ]
   },
   "style": "v2",
   "componentFramework": "glass-easel",

@@ -1,0 +1,87 @@
+.search-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 400rpx;
+  }
+  
+  .search-bar {
+	display: flex;
+	flex-direction: row;
+  }
+  .search-button {
+	  width: 50rpx;
+	  height: 50rpx;
+	  margin-left: 20rpx;
+  }
+  .search-button image{
+	  width: 100%;
+	  height: 100%;
+  }
+
+  .search-input {
+	width: 550rpx;
+	height: 40rpx;
+	border-radius: 20rpx;
+	border: 5rpx solid #ccc;
+	padding: 0 20rpx;
+	font-size: 28rpx;
+	margin-bottom: 20rpx;
+  }
+  
+  .search-history {
+	width: 80%;
+	margin-bottom: 20rpx;
+  }
+  
+  .search-history-title {
+	font-size: 32rpx;
+	font-weight: bold;
+	margin-bottom: 20rpx;
+  }
+  
+  .search-history-list {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .search-history-item {
+	background-color: #f2f2f2;
+	border-radius: 20rpx;
+	padding: 10rpx 20rpx;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 28rpx;
+  }
+  
+  .search-history-clear {
+	font-size: 28rpx;
+	color: #007aff;
+	text-align: right;
+  }
+  
+  .search-recommend {
+	width: 80%;
+  }
+  
+  .search-recommend-title {
+	font-size: 32rpx;
+	font-weight: bold;
+	margin-bottom: 20rpx;
+  }
+  
+  .search-recommend-list {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .search-recommend-item {
+	background-color: #f2f2f2;
+	border-radius: 20rpx;
+	padding: 10rpx 20rpx;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	font-size: 28rpx;
+  }
+  

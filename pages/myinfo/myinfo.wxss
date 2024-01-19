@@ -1,0 +1,59 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 550rpx;
+  }
+  
+  .user-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 20px;
+  }
+  
+  .info {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .name {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .department {
+	font-size: 18px;
+  }
+  
+  .settings {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+  }
+  
+  .item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	border-bottom: 1px solid #eee;
+  }
+  
+  .text {
+	font-size: 18px;
+  }
+  
+  .arrow {
+	width: 20px;
+	height: 20px;
+  }
+  

@@ -9,7 +9,7 @@
   	</swiper>
 
 	<view class="post">
-		<view class="post-item" wx:for="{{[1,2,3,4]}}">
+		<view class="post-item" bind:tap="handleTap" wx:for="{{[1,2,3,4]}}">
 			<view class="post-header">
 				<view class="avatar">
 					<image src="../../images/avatar.png"></image>

@@ -1,0 +1,34 @@
+.category-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.category-container .category-item{
+	display: flex;
+	flex-direction: row;
+}
+
+.category-icon image{
+	width: 150rpx;
+	height: 150rpx;
+}
+.category-name{
+	font-weight: bold;
+	font-size: 40rpx;
+	margin-top: 55rpx;
+	margin-left: 30rpx;
+}
+.heat{
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: 20rpx;
+	margin-top: 60rpx;
+}
+.heat image{
+	width: 50rpx;
+	height: 50rpx;
+}
+.heat .heat-count{
+	margin-top: 10rpx;
+}
