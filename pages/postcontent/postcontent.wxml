@@ -1,0 +1,24 @@
+<view class="body">
+	<scroll-view class="picture-container" scroll-x="true" scroll-y="false">
+		<view class="picture-item" wx:for="{{[1,2,3]}}">
+			<image src="../../images/banner1.jpg"></image>
+		</view>
+		<view class="picture-add">
+			<image src="../../images/category.png"></image>
+		</view>
+	</scroll-view>
+	<view class="textarea">
+		<input placeholder="填写标题" />
+		<textarea placeholder="添加正文"></textarea>
+	</view>
+	<view class="category-select">
+		<picker mode="selector" bindchange="pickerChange" value="{{index}}" range="{{categories}}">
+			<view class="picker">#{{categories[index]}}</view>
+		</picker>
+	</view>
+	<view class="publish">
+		<button>
+			<text>发布</text>
+		</button>
+	</view>
+</view>
