@@ -1,0 +1,17 @@
+.picture-container{
+	margin-top: 20rpx;
+	display: inline-flex;
+	white-space: nowrap;
+}
+
+.picture-item, .picture-add{
+	display: inline-block;
+	width: 200rpx;
+	height: 200rpx;
+	margin-right: 10rpx;
+}
+
+.picture-item image, .picture-add image{
+	width: 100%;
+	height: 100%;
+}
