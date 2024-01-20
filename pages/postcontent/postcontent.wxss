@@ -15,3 +15,14 @@
 	width: 100%;
 	height: 100%;
 }
+
+.buttom{
+	position: fixed;
+	bottom: 50rpx;
+	width: 100%;
+}
+
+.publish button{
+	background-color: #f4ebde;
+	width: 100%;
+}

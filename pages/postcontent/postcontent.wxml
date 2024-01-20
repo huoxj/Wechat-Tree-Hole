@@ -8,17 +8,19 @@
 		</view>
 	</scroll-view>
 	<view class="textarea">
-		<input placeholder="填写标题" />
-		<textarea placeholder="添加正文"></textarea>
+		<input placeholder="填写标题" style="height: 50rpx; font-size: 40rpx; font-weight: bold; margin-bottom: 20rpx;" />
+		<textarea placeholder="添加正文" style="height: 750rpx;"></textarea>
 	</view>
-	<view class="category-select">
-		<picker mode="selector" bindchange="pickerChange" value="{{index}}" range="{{categories}}">
-			<view class="picker">#{{categories[index]}}</view>
-		</picker>
-	</view>
-	<view class="publish">
-		<button>
-			<text>发布</text>
-		</button>
+	<view class="buttom">
+		<view class="category-select">
+			<picker mode="selector" bindchange="pickerChange" value="{{index}}" range="{{categories}}" style="background-color: #f4ebde; width: 130rpx; height: 50rpx; border-radius: 15rpx; margin-bottom: 15rpx; margin-left: 5rpx;">
+				<view class="picker">#{{categories[index]}}</view>
+			</picker>
+		</view>
+		<view class="publish">
+			<button>
+				<text>发布</text>
+			</button>
+		</view>
 	</view>
 </view>
