@@ -5,7 +5,8 @@
     "pages/myinfo/myinfo",
     "pages/postpage/postpage",
     "pages/search/search",
-    "pages/postcontent/postcontent"
+    "pages/postcontent/postcontent",
+    "pages/postdetail/postdetail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -23,6 +24,11 @@
         "iconPath": "images/category.png",
         "selectedIconPath": "images/categoryfill.png",
         "pagePath": "pages/category/category"
+      },
+      {
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add.png",
+        "pagePath": "pages/postcontent/postcontent"
       },
       {
         "iconPath": "images/search.png",
