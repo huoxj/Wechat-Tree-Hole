@@ -1,0 +1,14 @@
+<view class="body">
+	<view class="category-container">
+		<view class="category-item" wx:for="{{[1,2,3,4,5]}}">
+			<view class="category-icon">
+				<image src="../../images/category.png"></image>
+			</view>
+			<view class="category-name">灌水区</view>
+			<view class="heat">
+				<image src="../../images/heat.png"></image>
+				<view class="heat-count">114</view>
+			</view>
+		</view>
+	</view>
+</view>

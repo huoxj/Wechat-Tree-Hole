@@ -1,0 +1,26 @@
+<view class="search-container">
+  <view class="search-bar">
+	<input class="search-input" placeholder="搜索" bindinput="onInput" value="{{inputValue}}"/>
+    <view class="search-button" bind:tap="onSearch">
+	  <image src="../../images/search.png"></image>
+    </view>
+  </view>
+  <view class="search-history">
+    <view class="search-history-title">搜索历史</view>
+    <view class="search-history-list">
+        <block wx:for="{{historyList}}" wx:for-item="item" wx:for-index="index">
+            <view class= "search-history-item" key="{{index}}" bindtap="onItemClick" data-keyword="{{item}}">
+        {{item}}</view>
+      </block>
+    </view>
+    <view class="search-history-clear" bindtap="clearHistory">清空历史记录</view>
+  </view>
+  <view class="search-recommend">
+    <view class="search-recommend-title">搜索推荐</view>
+    <view class="search-recommend-list">
+      <block wx:for="{{recommendList}}" wx:key="index">
+        <view class="search-recommend-item" key="{{index}}" bindtap="onItemClick" data-keyword="{{item}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<view class="body" style="display: flex; flex-direction: column;">
+
+	<view class="user-info" style="display: flex; flex-direction: row;">
+		<image src="../../images/avatar.png" style="width: 80rpx; height: 80rpx; border-radius: 15rpx;"></image>
+		<view class="user-name" style="margin-left: 20rpx;">NJUer</view>
+		<view class="date">2024-1-1</view>
+	</view>
+
+	<view class="text-container" style="background-color: white;">
+		<view class="title" style="font-weight: bold; font-size: 40rpx; width: 95%;">滕王阁序</view>
+		<view class="content" style="width: 95%;">{{content}}</view>
+	</view>
+
+	<scroll-view class="picture-container" scroll-x="true" scroll-y="false">
+		<view class="picture-item" wx:for="{{[1,2,3,4]}}">
+			<image src="../../images/banner1.jpg" style="width: 100%; height: 100%;"></image>
+		</view>
+	</scroll-view>
+
+	<view class="comment-container" style="margin-top: 10rpx; margin-bottom: 200rpx;">
+		<view class="comment-header">评论 {{commentCount}}</view>
+		<view class="comment-item" style="background-color: white; display: flex; flex-direction: row; margin-top: 10rpx; min-height: 120rpx;" wx:for="{{[1,2,3,4]}}">
+			<image src="../../images/avatar.png" style="width: 80rpx; height: 80rpx; border-radius: 15rpx;"></image>
+			<view class="comment-content" style="display: flex; flex-direction: row; width: 100%; margin-bottom: 25rpx;">
+				<view class="comment-main" style="margin-top: 20rpx; width: 100%;">
+					<view class="comment-name" style="font-weight: bold;">NJUer</view>
+					<view class="comment-text" style="margin-top: 5rpx; font-size: 28rpx; word-wrap: break-word; white-space: normal; max-width: 550rpx;">从小丘西行百二十步，隔篁竹，闻水声，如鸣珮环，心乐之。</view>
+				</view>
+				<view class="comment-thumb" style="display: flex; flex-direction: row;">
+					<image src="../../images/thumb.png" style="width: 30rpx; height: 30rpx;"></image>
+					<view class="comment-thumb-count" style="font-size: 26rpx;">114</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="tabbar">
+		<input class="comment-input" placeholder="评论" />
+		<view class="button">
+			<image src="../../images/thumb.png"></image>
+			<text>114</text>
+		</view>
+		<view class="button" style="margin-right: 40rpx;">
+			<image src="../../images/comment.png"></image>
+			<text>114</text>
+		</view>
+	</view>
+</view>

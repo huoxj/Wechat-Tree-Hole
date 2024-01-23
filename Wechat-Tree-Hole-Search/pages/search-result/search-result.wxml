@@ -1,0 +1,33 @@
+<view class="post">
+		<view class="post-item" bind:tap="handleTap" wx:for="{{searchList}}" wx:for-item = "post" wx:for-index = "index" wx:key="id" data-postid="{{post.id}}">
+			<view class="post-header">
+				<view class="avatar">
+					<image src="../../images/avatar.png"></image>
+				</view>
+				<text class="name">{{post.publisher}}</text>
+				<text class="date">2024-1-1</text>
+			</view>
+			<view class="post-content">
+				<view class="title">{{post.title}}</view>
+				<view class="content">{{post.content}}</view>
+				<view class="images">
+					<view class="image-item" wx:for="{{[1,2]}}">
+						<image src="../../images/banner1.jpg"></image>
+					</view>
+				</view>
+			</view>
+			<view class="post-buttom">
+				<view class="category">#灌水区</view>
+				<view class="intereact">
+					<view class="thumb">
+						<image src="../../images/thumb.png"></image>
+						<view class="thumb-count">114</view>
+					</view>
+					<view class="comment">
+						<image src="../../images/comment.png"></image>
+						<view class="comment-count">514</view>
+					</view>
+				</view>
+			</view>
+		</view>
+</view>
