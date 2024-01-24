@@ -4,7 +4,8 @@
     "pages/category/category",
     "pages/myinfo/myinfo",
     "pages/postpage/postpage",
-    "pages/search/search",
+	"pages/search/search",
+	"pages/search-result/search-result",
     "pages/postcontent/postcontent",
     "pages/postdetail/postdetail"
   ],

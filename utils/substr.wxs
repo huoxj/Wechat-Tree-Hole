@@ -1,0 +1,11 @@
+/**
+ * 将完整的日期时间戳字符串的时分秒裁掉
+ * @param val 要裁切的日期字符串
+ */
+var substr = function(val) {
+	if (val == undefined) {
+	  return;
+	}
+	return val.substring(0, 10);
+  }
+  module.exports.substr = substr;

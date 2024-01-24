@@ -3,12 +3,14 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 400rpx;
+	height: auto;
+	margin-top: 30rpx;
   }
   
   .search-bar {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 50rpx;
   }
   .search-button {
 	  width: 50rpx;
