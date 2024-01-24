@@ -12,9 +12,12 @@ Page({
     },
 
 	onLoad: function () {
-	  this.setData({
-		historyList: wx.getStorageSync('historyList') || []
-	  })
+		wx.setNavigationBarTitle({
+		  title: '搜索',
+		})
+		this.setData({
+			historyList: wx.getStorageSync('historyList') || []
+		})
 	},
   
 	onInput: function (e) {

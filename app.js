@@ -4,6 +4,8 @@ App({
 	  
   },
   globalData: {
-    userInfo: null
+	isUserLoggerIn : false,
+	userId : -1,
+	userName : ""
   }
 })

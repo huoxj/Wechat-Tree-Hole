@@ -1,24 +1,16 @@
 <view class="body">
-	<scroll-view class="picture-container" scroll-x="true" scroll-y="false">
-		<view class="picture-item" wx:for="{{[1,2,3]}}">
-			<image src="../../images/banner1.jpg"></image>
-		</view>
-		<view class="picture-add">
-			<image src="../../images/category.png"></image>
-		</view>
-	</scroll-view>
-	<view class="textarea">
-		<input placeholder="填写标题" style="height: 50rpx; font-size: 40rpx; font-weight: bold; margin-bottom: 20rpx;" />
-		<textarea placeholder="添加正文" style="height: 750rpx;"></textarea>
+	<view class="textarea" style="margin-top: 20rpx;">
+		<input placeholder="填写标题" bindinput="titleChange" style="height: 50rpx; font-size: 40rpx; font-weight: bold; margin-bottom: 20rpx;" />
+		<textarea placeholder="添加正文" bindinput="contentChange" style="height: 750rpx;"></textarea>
 	</view>
 	<view class="buttom">
 		<view class="category-select">
-			<picker mode="selector" bindchange="pickerChange" value="{{index}}" range="{{categories}}" style="background-color: #f4ebde; width: 130rpx; height: 50rpx; border-radius: 15rpx; margin-bottom: 15rpx; margin-left: 5rpx;">
-				<view class="picker">#{{categories[index]}}</view>
+			<picker mode="selector" bindchange="pickerChange" value="{{index}}" range="{{categoryList}}" style="background-color: #f4ebde; width: 130rpx; height: 50rpx; border-radius: 15rpx; margin-bottom: 15rpx; margin-left: 5rpx;">
+				<view class="picker">#{{categoryList[index]}}</view>
 			</picker>
 		</view>
 		<view class="publish">
-			<button>
+			<button bind:tap="postConfirm">
 				<text>发布</text>
 			</button>
 		</view>

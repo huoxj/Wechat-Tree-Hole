@@ -42,23 +42,24 @@ class Postitem extends Request{
 		})
 	}
 	/**
-	 * 获取帖子图片地址列表
+	 * 发帖
 	 */
-	getPicureUrlList(options){
+	postPost(options){
 		return new Promise((resolve, reject)=>{
 			let props = {
-				url : "GetUrlByPostId",
+				url : "/post",
 				data : options.data,
 				type : "POST",
-				sCallBack : ()=>{
+				sCallBack : res=>{
 					resolve(res)
 				},
-				eCallBack : ()=>{
+				eCallBack : res=>{
 					reject(res)
 				}
 			}
 			this.request(props)
 		})
 	}
+
 }
 export {Postitem}

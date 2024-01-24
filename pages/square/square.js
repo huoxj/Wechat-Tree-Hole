@@ -1,43 +1,29 @@
 import {Postitem} from '../../model/Postitem'
+import {User} from '../../model/User'
 const postApi = new Postitem()
+const userApi = new User()
 
 Page({
 	data: {
 	  banner: ['../../images/banner1.jpg', '../../images/banner2.jpg'],
-	  postList: [],
-	  pictureUrlList: []
+	  postList : []
 	},
   
 	onLoad() { 
-		wx.setNavigationBarTitle({
-			title: '广场'
-		})
-		postApi.getPostList({}).then(res=>{
-			if(res == null) return
-			var postList = res
-			for(var i = 0;i < postList.length;i++){
-				//请求帖子图片
-				var options = {data: {post_id: postList[i].id}}
-				var picUrls = []
-				postApi.getPicureUrlList(options).then(res=>{
-					picUrls = res
-					console.log(res)
-					postList[i].pictureUrlList = res
-					this.setData({
-						postList: postList
-					})
-				}).catch(err=>{
-					console.log(err)
-				})
-			}
-		}).catch(err=>{
-			console.log(err)
-		})
-		
+	  wx.setNavigationBarTitle({
+		title: '广场'
+	  })
 	},
 	
 	onShow(){
-		
+	  postApi.getPostList({}).then(res=>{
+		  	this.setData({
+				  postList: res
+			})
+			this.updateUserProfile(0)
+	  }).catch(err=>{
+		  console.log(err)
+	  })
 	  
 	},
   
@@ -55,5 +41,19 @@ Page({
 				res.eventChannel.emit('postDetail', postDetail)
 			}
         })
+	},
+	updateUserProfile(index){
+		if(index == this.data.postList.length) return
+		var postList = this.data.postList
+		userApi.getUserProfile({data: {id: postList[index].userId}}).then(res=>{
+			postList[index].userName = res.name
+			this.setData({
+				postList: postList
+			})
+			this.updateUserProfile(index + 1)
+		}).catch(err=>{
+			console.log(err)
+		})
 	}
+
   })

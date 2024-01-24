@@ -15,17 +15,12 @@
 				<view class="avatar">
 					<image src="../../images/avatar.png"></image>
 				</view>
-				<text class="name">{{item.userId}}</text>
+				<text class="name">{{item.userName}}</text>
 				<text class="date">{{strTools.substr(item.postTime)}}</text>
 			</view>
 			<view class="post-content">
 				<view class="title">{{item.title}}</view>
 				<view class="content">{{item.text}}</view>
-				<view class="images">
-					<view class="image-item" wx:for="{{[1,2]}}" style="margin-right: 10rpx;">
-						<image src="../../images/banner1.jpg"></image>
-					</view>
-				</view>
 			</view>
 			<view class="post-buttom">
 				<view class="category">#{{item.postPartition}}</view>

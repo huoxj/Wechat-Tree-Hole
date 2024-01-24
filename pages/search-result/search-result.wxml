@@ -5,7 +5,7 @@
 				<view class="avatar">
 					<image src="../../images/avatar.png"></image>
 				</view>
-				<text class="name">{{item.userId}}</text>
+				<text class="name">{{item.userName}}</text>
 				<text class="date">{{strTools.substr(item.postTime)}}</text>
 			</view>
 			<view class="post-content">

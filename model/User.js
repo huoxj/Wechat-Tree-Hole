@@ -1,15 +1,15 @@
 import {Request} from '../utils/request'
-class Comment extends Request{
+class User extends Request{
 	constructor(){
 		super();
 	}
 	/**
-	 * 根据帖子id获取其评论列表
+	 * 根据用户id获取信息
 	 */
-	getCommentList(options){ 
+	getUserProfile(options){
 		return new Promise((resolve, reject)=>{
 			let props = {
-				url : "/GetAllComments",
+				url : "/user/GetUserInformationById",
 				data : options.data,
 				type : "POST",
 				sCallBack : res=>{
@@ -23,12 +23,31 @@ class Comment extends Request{
 		})
 	}
 	/**
-	 * 发表评论
+	 * 注册
 	 */
-	postComment(options){
+	register(options){
 		return new Promise((resolve, reject)=>{
 			let props = {
-				url : "/comment",
+				url : "/user/register",
+				data : options.data,
+				type : "POST",
+				sCallBack : res=>{
+					resolve(res)
+				},
+				eCallBack : res=>{
+					reject(res)
+				}
+			}
+			this.request(props)
+		})
+	}
+	/**
+	 * 登录
+	 */
+	login(options){
+		return new Promise((resolve, reject)=>{
+			let props = {
+				url : "/user/login",
 				data : options.data,
 				type : "POST",
 				sCallBack : res=>{
@@ -42,4 +61,4 @@ class Comment extends Request{
 		})
 	}
 }
-export {Comment}
+export {User}

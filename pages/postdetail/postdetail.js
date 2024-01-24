@@ -1,6 +1,8 @@
 import {Comment} from '../../model/Comment'
 import {Request} from '../../utils/request'
+import {User} from '../../model/User'
 
+const userApi = new User()
 const commentApi = new Comment()
 const thumbApi = new Request()
 
@@ -29,7 +31,7 @@ Page({
 				this.setData({
 					commentList:res
 				})
-				console.log(this.data.commentList)
+				this.updateUserProfile(0)
 			}).catch(err=>{
 				console.log(err)
 			})
@@ -71,7 +73,38 @@ Page({
   },
 
   commentConfirm(e) {
-		
-  }
+	  	let options = {data: {post_id: this.data.postDetail.id, username: getApp().globalData.userName, text: this.data.commentText}}
+		commentApi.postComment(options).then(res=>{
+			wx.showToast({
+			  title: '评论成功!',
+			  icon: 'null'
+			})
+			var newCommentList = this.data.commentList
+			console.log(newCommentList)
+			newCommentList.push({id:-1 ,postId: this.data.postDetail.id, userId: getApp().globalData.userId, likesCount: null,text: this.data.commentText})
+			this.setData({
+				commentList: newCommentList
+			})
+		}).catch(err=>{
+			console.log(err)
+			wx.showToast({
+				title: '评论失败',
+				icon: 'null'
+			  })
+		})
+  },
+	updateUserProfile(index){
+		if(index == this.data.commentList.length) return
+		var arr = this.data.commentList
+		userApi.getUserProfile({data: {id: arr[index].userId}}).then(res=>{
+			arr[index].userName = res.name
+			this.setData({
+				commentList: arr
+			})
+			this.updateUserProfile(index + 1)
+		}).catch(err=>{
+			console.log(err)
+		})
+	}
 
 })
