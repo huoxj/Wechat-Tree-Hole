@@ -1,0 +1,34 @@
+<wxs src="../../utils/substr.wxs" module="strTools"></wxs>
+<view class="post">
+	<view class="post-item" bind:tap="handleTap" wx:for="{{searchList}}" wx:key="id" data-postid="{{item.id}}">
+			<view class="post-header">
+				<view class="avatar">
+					<image src="../../images/avatar.png"></image>
+				</view>
+				<text class="name">{{item.userName}}</text>
+				<text class="date">{{strTools.substr(item.postTime)}}</text>
+			</view>
+			<view class="post-content">
+				<view class="title">{{item.title}}</view>
+				<view class="content">{{item.text}}</view>
+				<view class="images">
+					<view class="image-item" wx:for="{{[1,2]}}" style="margin-right: 10rpx;">
+						<image src="../../images/banner1.jpg"></image>
+					</view>
+				</view>
+			</view>
+			<view class="post-buttom">
+				<view class="category">#{{item.postPartition}}</view>
+				<view class="intereact">
+					<view class="thumb">
+						<image src="../../images/thumb.png"></image>
+						<view class="thumb-count">{{item.likesCount}}</view>
+					</view>
+					<view class="comment">
+						<image src="../../images/comment.png"></image>
+						<view class="comment-count">{{item.commentNumber}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+</view>

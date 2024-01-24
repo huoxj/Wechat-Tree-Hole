@@ -27,6 +27,14 @@
 	font-size: 16px;
 	line-height: 1.5;
 }
+.category {
+	font-size: 29rpx;
+	margin-top: 5rpx;
+	margin-right: auto;
+	margin-left: 10rpx;
+	margin-bottom: 10rpx;
+	color: #151515
+}
 
 .picture-container{
 	display: inline-flex;
@@ -79,6 +87,10 @@
 	margin-left: auto;
 	display: flex;
 	flex-direction: column;
+}
+.button{
+	justify-content: center;
+	align-items: center;
 }
 .tabbar .button image{
 	width: 40rpx;

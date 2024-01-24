@@ -1,0 +1,10 @@
+<!-- 以下为登陆注册 -->
+<modal hidden="{{login}}" title="请登录" confirm-text="登录" cancel-text="注册" bindcancel="toRegister" bindconfirm="Login" style="background-color: #f4ebde;">
+      <input bindinput='inputName' type='text' placeholder="请输入用户名" auto-focus style="background-color: white; height: 60rpx; border-radius: 15rpx;"/>
+      <input bindinput='inputPassword' type='password' placeholder="请输入密码" style="background-color: white; height: 60rpx; border-radius: 15rpx;" />
+</modal>
+<modal hidden="{{register}}" title="注册" confirm-text="注册" bindconfirm="Register" bindcancel="toLogin" style="background-color: #f4ebde;">
+      <input bindinput='inputName' type='text' placeholder="请输入用户名" auto-focus style="background-color: white; height: 60rpx; border-radius: 15rpx;"/>
+      <input bindinput='inputPassword' type='password' placeholder="请输入密码" style="background-color: white; height: 60rpx; border-radius: 15rpx;"/>
+      <input bindinput='inputDepartment' type='text' placeholder="请输入院系" style="background-color: white; height: 60rpx; border-radius: 15rpx;"/>
+</modal>

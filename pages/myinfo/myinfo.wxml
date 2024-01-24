@@ -9,11 +9,9 @@
   <view class="settings">
     <view class="item" bindtap="handleTap">
       <text class="text">设置1</text>
-      <image class="arrow" src="/images/arrow.png"></image>
     </view>
     <view class="item" bindtap="handleTap">
       <text class="text">设置2</text>
-      <image class="arrow" src="/images/arrow.png"></image>
     </view>
   </view>
 </view>

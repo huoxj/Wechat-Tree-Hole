@@ -1,48 +1,40 @@
+<wxs src="../../utils/substr.wxs" module="strTools"></wxs>
 <view class="body" style="display: flex; flex-direction: column;">
 
 	<view class="user-info" style="display: flex; flex-direction: row;">
 		<image src="../../images/avatar.png" style="width: 80rpx; height: 80rpx; border-radius: 15rpx;"></image>
-		<view class="user-name" style="margin-left: 20rpx;">NJUer</view>
-		<view class="date">2024-1-1</view>
+		<view class="user-name" style="margin-left: 20rpx;">{{postDetail.userId}}</view>
+		<view class="date">{{strTools.substr(postDetail.postTime)}}</view>
 	</view>
 
 	<view class="text-container" style="background-color: white;">
-		<view class="title" style="font-weight: bold; font-size: 40rpx; width: 95%;">滕王阁序</view>
-		<view class="content" style="width: 95%;">{{content}}</view>
+		<view class="title" style="font-weight: bold; font-size: 40rpx; width: 95%;">{{postDetail.title}}</view>
+		<view class="content" style="width: 95%; margin-bottom: 50rpx;">{{postDetail.text}}</view>
+		<view class="category">#{{postDetail.postPartition}}</view>
 	</view>
 
-	<scroll-view class="picture-container" scroll-x="true" scroll-y="false">
-		<view class="picture-item" wx:for="{{[1,2,3,4]}}">
-			<image src="../../images/banner1.jpg" style="width: 100%; height: 100%;"></image>
-		</view>
-	</scroll-view>
-
 	<view class="comment-container" style="margin-top: 10rpx; margin-bottom: 200rpx;">
-		<view class="comment-header">评论 {{commentCount}}</view>
-		<view class="comment-item" style="background-color: white; display: flex; flex-direction: row; margin-top: 10rpx; min-height: 120rpx;" wx:for="{{[1,2,3,4]}}">
+		<view class="comment-header">评论 {{commentList.length}}</view>
+		<view class="comment-item" style="background-color: white; display: flex; flex-direction: row; margin-top: 10rpx; min-height: 120rpx;" wx:for="{{commentList}}" wx:key="id">
 			<image src="../../images/avatar.png" style="width: 80rpx; height: 80rpx; border-radius: 15rpx;"></image>
 			<view class="comment-content" style="display: flex; flex-direction: row; width: 100%; margin-bottom: 25rpx;">
 				<view class="comment-main" style="margin-top: 20rpx; width: 100%;">
-					<view class="comment-name" style="font-weight: bold;">NJUer</view>
-					<view class="comment-text" style="margin-top: 5rpx; font-size: 28rpx; word-wrap: break-word; white-space: normal; max-width: 550rpx;">从小丘西行百二十步，隔篁竹，闻水声，如鸣珮环，心乐之。</view>
-				</view>
-				<view class="comment-thumb" style="display: flex; flex-direction: row;">
-					<image src="../../images/thumb.png" style="width: 30rpx; height: 30rpx;"></image>
-					<view class="comment-thumb-count" style="font-size: 26rpx;">114</view>
+					<view class="comment-name" style="font-weight: bold;">{{item.userName}}</view>
+					<view class="comment-text" style="margin-top: 5rpx; font-size: 28rpx; word-wrap: break-word; white-space: normal; max-width: 550rpx;">{{item.text}}</view>
 				</view>
 			</view>
 		</view>
 	</view>
 
 	<view class="tabbar">
-		<input class="comment-input" placeholder="评论" />
-		<view class="button">
+		<input class="comment-input" placeholder="评论" bindconfirm="commentConfirm" bindinput="commentInput" value="{{commentText}}" />
+		<view class="button" bind:tap="thumb">
 			<image src="../../images/thumb.png"></image>
-			<text>114</text>
+			<text>{{postDetail.likesCount}}</text>
 		</view>
-		<view class="button" style="margin-right: 40rpx;">
+		<view class="button" style="margin-right: 40rpx;" bind:tap="comment">
 			<image src="../../images/comment.png"></image>
-			<text>114</text>
+			<text>{{postDetail.commentNumber}}</text>
 		</view>
 	</view>
 </view>

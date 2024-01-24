@@ -1,11 +1,16 @@
 .category-container {
 	display: flex;
 	flex-direction: column;
-}
+} 
 
 .category-container .category-item{
 	display: flex;
 	flex-direction: row;
+}
+
+.category-item{
+	margin-bottom: 10rpx;
+	background-color: white;
 }
 
 .category-icon image{
